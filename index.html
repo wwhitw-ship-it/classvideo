@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>零基礎小白也能拍！2小時短影音實戰班</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neonGreen: '#ccff00',
+                        neonPurple: '#b026ff',
+                        darkBg: '#0a0a0a',
+                        cardBg: '#1a1a1a',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #050505; /* Deepest black */
+        }
+        .phone-frame {
+            border: 12px solid #2d2d2d;
+            border-radius: 2rem;
+            overflow: hidden;
+            position: relative;
+            background-color: #000;
+            box-shadow: 0 0 20px rgba(204, 255, 0, 0.15); /* Neon Green Glow */
+        }
+        .phone-notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40%;
+            height: 24px;
+            background-color: #2d2d2d;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            z-index: 20;
+        }
+        /* Neon Text Gradient */
+        .gradient-text-main {
+            background: linear-gradient(to right, #ccff00, #00f0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-bg-main {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+        }
+        .blob {
+            position: absolute;
+            filter: blur(80px);
+            opacity: 0.4;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body class="bg-darkBg min-h-screen flex justify-center py-0 md:py-8 px-0 md:px-4 text-white">
+
+    <!-- Canvas Container -->
+    <div class="w-full max-w-4xl bg-cardBg shadow-2xl overflow-hidden md:rounded-xl border border-gray-800 relative">
+        
+        <!-- Header Section -->
+        <header class="relative p-10 md:p-16 text-center overflow-hidden border-b border-gray-800">
+            <!-- Background Effects -->
+            <div class="blob bg-purple-600 w-64 h-64 rounded-full top-0 left-0 -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="blob bg-neonGreen w-48 h-48 rounded-full bottom-0 right-0 translate-x-1/3 translate-y-1/3 opacity-20"></div>
+            
+            <div class="relative z-10">
+                <h2 class="text-xl md:text-2xl font-bold text-neonGreen mb-3 tracking-widest uppercase">
+                    <span class="border border-neonGreen px-3 py-1 rounded">FOLLOW THE TREND</span>
+                </h2>
+                <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight tracking-tight text-white">
+                    零基礎小白<br class="md:hidden">也能拍！<br>
+                    <span class="gradient-text-main">2小時</span> 短影音實戰班
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 font-medium mt-6 max-w-2xl mx-auto border-t border-gray-700 pt-6">
+                    一支手機 ＋ 萬用表格，<span class="text-white font-bold">告別鏡頭恐懼</span>，輕鬆產出高品質影片
+                </p>
+            </div>
+        </header>
+
+        <!-- Video Placeholder Section -->
+        <section class="bg-[#0f0f0f] py-16 px-6 relative">
+             <!-- Decorative Grid Background -->
+             <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4b5563 1px, transparent 1px); background-size: 24px 24px;"></div>
+
+            <div class="text-center mb-12 relative z-10">
+                <span class="bg-gray-800 text-neonGreen text-sm font-bold px-4 py-1.5 rounded-full border border-gray-700">STUDENT SHOWCASE</span>
+                <h3 class="text-3xl font-bold text-white mt-4">課程學員分享 & 課程介紹</h3>
+            </div>
+
+            <!-- Two Video Frames -->
+            <div class="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-20 relative z-10">
+                
+                <!-- Video 1 -->
+                <div class="flex flex-col items-center">
+                    <!-- FIXED: Adjusted height to h-[437px] to perfectly match 9:16 aspect ratio inside the 12px border, preventing black bars -->
+                    <div class="phone-frame w-64 h-[437px] group transition-shadow duration-300 hover:shadow-[0_0_40px_rgba(204,255,0,0.4)]">
+                        <div class="phone-notch"></div>
+                        <!-- Embedded Google Drive Video -->
+                        <iframe 
+                            src="https://drive.google.com/file/d/18W2q77arlZmahJZe7OQL7hCDnM8aNJph/preview" 
+                            class="w-full h-full z-10 relative bg-gray-900" 
+                            style="border:0;"
+                            allow="autoplay; encrypted-media" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="mt-5 text-center">
+                         <span class="text-neonGreen text-sm tracking-widest uppercase">學員分享</span>
+                         <p class="font-bold text-xl text-white">第一次拍就上手</p>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="flex flex-col items-center">
+                    <!-- FIXED: Adjusted height to h-[437px] for consistency -->
+                    <div class="phone-frame w-64 h-[437px] group cursor-pointer transition-shadow duration-300 hover:shadow-[0_0_40px_rgba(204,255,0,0.4)]">
+                        <div class="phone-notch"></div>
+                        <div class="w-full h-full bg-gray-900 flex flex-col justify-center items-center text-gray-500 relative overflow-hidden">
+                             <div class="absolute inset-0 opacity-5" style="background-image: linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px); background-size: 20px 20px;"></div>
+                            
+                            <div class="w-16 h-16 rounded-full border-2 border-white/20 flex items-center justify-center backdrop-blur-md group-hover:bg-neonGreen group-hover:border-neonGreen group-hover:text-black transition-all z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <p class="mt-4 text-sm font-bold z-10">影片預覽區 2</p>
+                        </div>
+                    </div>
+                    <div class="mt-5 text-center">
+                        <span class="text-neonGreen text-sm tracking-widest uppercase">課程說明</span>
+                        <p class="font-bold text-xl text-white">零基礎小白也能學</p>
+                   </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlights Section -->
+        <section class="py-16 px-8 bg-[#141414]">
+            <h3 class="text-3xl font-black text-center text-white mb-12">
+                課程<span class="text-neonGreen">三大亮點</span>
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Highlight 1 -->
+                <div class="text-center p-8 bg-[#1f1f1f] rounded-2xl border border-gray-800 hover:border-neonGreen hover:shadow-[0_0_15px_rgba(204,255,0,0.2)] transition-all group">
+                    <div class="w-14 h-14 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6 text-neonGreen group-hover:bg-neonGreen group-hover:text-black transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">手機實戰</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">免昂貴器材，運用現有設備直接開拍，降低入門門檻。</p>
+                </div>
+
+                <!-- Highlight 2 -->
+                <div class="text-center p-8 bg-[#1f1f1f] rounded-2xl border border-gray-800 hover:border-purple-500 hover:shadow-[0_0_15px_rgba(176,38,255,0.2)] transition-all group">
+                    <div class="w-14 h-14 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6 text-purple-400 group-hover:bg-purple-500 group-hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">萬用表格</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">獨家邏輯架構，套用公式就能生成腳本，不用再想破頭。</p>
+                </div>
+
+                <!-- Highlight 3 -->
+                <div class="text-center p-8 bg-[#1f1f1f] rounded-2xl border border-gray-800 hover:border-blue-400 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] transition-all group">
+                    <div class="w-14 h-14 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6 text-blue-400 group-hover:bg-blue-400 group-hover:text-black transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">克服恐懼</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">傳授 3 種動作秘訣，讓你面對鏡頭自然自信不尷尬。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Student Reviews Section -->
+        <section class="py-16 px-6 bg-[#0f0f0f] relative overflow-hidden border-t border-gray-900">
+             <!-- Background elements -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-neonPurple rounded-full mix-blend-multiply filter blur-[100px] opacity-10"></div>
+            
+            <h3 class="text-3xl font-black text-center text-white mb-12 relative z-10">
+                學員<span class="text-neonPurple">真實好評</span>
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto relative z-10">
+                <!-- Review 1 -->
+                <div class="bg-[#1a1a1a] p-6 rounded-xl border border-gray-800 hover:border-neonPurple/50 hover:shadow-[0_0_15px_rgba(176,38,255,0.1)] transition-all duration-300">
+                    <div class="flex items-center mb-4 text-yellow-400 space-x-1">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="text-gray-200 font-medium text-lg leading-relaxed">"太棒了，淺顯易懂。"</p>
+                </div>
+                
+                <!-- Review 2 -->
+                <div class="bg-[#1a1a1a] p-6 rounded-xl border border-gray-800 hover:border-neonPurple/50 hover:shadow-[0_0_15px_rgba(176,38,255,0.1)] transition-all duration-300">
+                    <div class="flex items-center mb-4 text-yellow-400 space-x-1">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="text-gray-200 font-medium text-lg leading-relaxed">"短暫但能快速釐清主題規劃"</p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-[#1a1a1a] p-6 rounded-xl border border-gray-800 hover:border-neonPurple/50 hover:shadow-[0_0_15px_rgba(176,38,255,0.1)] transition-all duration-300">
+                     <div class="flex items-center mb-4 text-yellow-400 space-x-1">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="text-gray-200 font-medium text-lg leading-relaxed">"非常清楚明瞭"</p>
+                </div>
+
+                <!-- Review 4 -->
+                 <div class="bg-[#1a1a1a] p-6 rounded-xl border border-gray-800 hover:border-neonPurple/50 hover:shadow-[0_0_15px_rgba(176,38,255,0.1)] transition-all duration-300">
+                     <div class="flex items-center mb-4 text-yellow-400 space-x-1">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="text-gray-200 font-medium text-lg leading-relaxed">"精彩"</p>
+                </div>
+
+                <!-- New Reviews Added Below -->
+                
+                <div class="bg-[#1a1a1a] p-6 rounded-xl border border-gray-800 hover:border-neonPurple/50 hover:shadow-[0_0_15px_rgba(176,38,255,0.1)] transition-all duration-300">
+                    <div class="flex items-center mb-4 text-yellow-400 space-x-1">
+                       <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                   </div>
+                   <p class="text-gray-200 font-medium text-lg leading-relaxed">"課程豐富學以致用。"</p>
+               </div>
+
+               <div class="bg-[#1a1a1a] p-6 rounded-xl border border-gray-800 hover:border-neonPurple/50 hover:shadow-[0_0_15px_rgba(176,38,255,0.1)] transition-all duration-300">
+                    <div class="flex items-center mb-4 text-yellow-400 space-x-1">
+                       <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                   </div>
+                   <p class="text-gray-200 font-medium text-lg leading-relaxed">"聽到很多沒聽過的東西"</p>
+               </div>
+
+               <div class="bg-[#1a1a1a] p-6 rounded-xl border border-gray-800 hover:border-neonPurple/50 hover:shadow-[0_0_15px_rgba(176,38,255,0.1)] transition-all duration-300">
+                    <div class="flex items-center mb-4 text-yellow-400 space-x-1">
+                       <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                   </div>
+                   <p class="text-gray-200 font-medium text-lg leading-relaxed">"主題簡單明瞭、內容值得思考"</p>
+               </div>
+
+               <div class="bg-[#1a1a1a] p-6 rounded-xl border border-gray-800 hover:border-neonPurple/50 hover:shadow-[0_0_15px_rgba(176,38,255,0.1)] transition-all duration-300">
+                    <div class="flex items-center mb-4 text-yellow-400 space-x-1">
+                       <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                   </div>
+                   <p class="text-gray-200 font-medium text-lg leading-relaxed">"了解定位 重新出發"</p>
+               </div>
+
+               <div class="bg-[#1a1a1a] p-6 rounded-xl border border-gray-800 hover:border-neonPurple/50 hover:shadow-[0_0_15px_rgba(176,38,255,0.1)] transition-all duration-300">
+                    <div class="flex items-center mb-4 text-yellow-400 space-x-1">
+                       <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                   </div>
+                   <p class="text-gray-200 font-medium text-lg leading-relaxed">"有學到東西"</p>
+               </div>
+
+               <div class="bg-[#1a1a1a] p-6 rounded-xl border border-gray-800 hover:border-neonPurple/50 hover:shadow-[0_0_15px_rgba(176,38,255,0.1)] transition-all duration-300">
+                    <div class="flex items-center mb-4 text-yellow-400 space-x-1">
+                       <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                   </div>
+                   <p class="text-gray-200 font-medium text-lg leading-relaxed">"方向更清楚"</p>
+               </div>
+
+               <div class="bg-[#1a1a1a] p-6 rounded-xl border border-gray-800 hover:border-neonPurple/50 hover:shadow-[0_0_15px_rgba(176,38,255,0.1)] transition-all duration-300">
+                    <div class="flex items-center mb-4 text-yellow-400 space-x-1">
+                       <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                   </div>
+                   <p class="text-gray-200 font-medium text-lg leading-relaxed">"老師講的很清晰自信很羨慕"</p>
+               </div>
+
+               <div class="bg-[#1a1a1a] p-6 rounded-xl border border-gray-800 hover:border-neonPurple/50 hover:shadow-[0_0_15px_rgba(176,38,255,0.1)] transition-all duration-300">
+                    <div class="flex items-center mb-4 text-yellow-400 space-x-1">
+                       <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                   </div>
+                   <p class="text-gray-200 font-medium text-lg leading-relaxed">"腳本直接抓到重點"</p>
+               </div>
+
+               <div class="bg-[#1a1a1a] p-6 rounded-xl border border-gray-800 hover:border-neonPurple/50 hover:shadow-[0_0_15px_rgba(176,38,255,0.1)] transition-all duration-300">
+                    <div class="flex items-center mb-4 text-yellow-400 space-x-1">
+                       <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                   </div>
+                   <p class="text-gray-200 font-medium text-lg leading-relaxed">"很滿意，內容很有趣新穎，喜歡"</p>
+               </div>
+
+               <div class="bg-[#1a1a1a] p-6 rounded-xl border border-gray-800 hover:border-neonPurple/50 hover:shadow-[0_0_15px_rgba(176,38,255,0.1)] transition-all duration-300">
+                    <div class="flex items-center mb-4 text-yellow-400 space-x-1">
+                       <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                   </div>
+                   <p class="text-gray-200 font-medium text-lg leading-relaxed">"我覺得很棒"</p>
+               </div>
+
+               <div class="bg-[#1a1a1a] p-6 rounded-xl border border-gray-800 hover:border-neonPurple/50 hover:shadow-[0_0_15px_rgba(176,38,255,0.1)] transition-all duration-300">
+                    <div class="flex items-center mb-4 text-yellow-400 space-x-1">
+                       <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                   </div>
+                   <p class="text-gray-200 font-medium text-lg leading-relaxed">"會想繼續聽"</p>
+               </div>
+
+            </div>
+        </section>
+
+        <!-- Portfolio Wall Section (Asset Proof) -->
+        <section class="py-20 px-4 md:px-8 bg-[#050505] border-t border-gray-900 relative">
+            <div class="container mx-auto max-w-[95%] text-center">
+                <h3 class="text-3xl md:text-5xl font-black text-center text-white mb-6">
+                    講師經歷
+                </h3>
+                <p class="text-gray-400 text-xl text-center mb-12 max-w-3xl mx-auto leading-relaxed">
+                    製作超過 1000 支以上短影音經驗<br>
+                    <span class="text-neonGreen font-bold">讓內容升級，流量自然來</span>
+                </p>
+                
+                <!-- Image Grid: 7 columns on desktop to match the requested layout -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-3">
+                    
+                    <!-- Image 1 -->
+                    <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
+                        <img src="https://lh3.googleusercontent.com/d/183AQ2mX4rcsUzDblWX-_KMR4tfckLrO_" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
+                        <!-- Enhanced Blur: Changed backdrop-blur-[2px] to [6px] and increased bg opacity for stronger effect -->
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                             style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
+                        </div>
+                    </div>
+
+                    <!-- Image 2 -->
+                    <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
+                        <img src="https://lh3.googleusercontent.com/d/1Qu7Oo0m7-9rf4PxPsLfgYweYrg-eJrvF" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                             style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
+                        </div>
+                    </div>
+
+                    <!-- Image 3 -->
+                    <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
+                        <img src="https://lh3.googleusercontent.com/d/1SLS1imXgD2RCgLktu0x7ER5pg1TMqxeh" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                             style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
+                        </div>
+                    </div>
+
+                    <!-- Image 4 -->
+                    <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
+                        <img src="https://lh3.googleusercontent.com/d/1vBg7zRGqXoAeWDI9vssZXJwkpqaKhERF" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                             style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
+                        </div>
+                    </div>
+
+                    <!-- Image 5 -->
+                    <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
+                        <img src="https://lh3.googleusercontent.com/d/1FlfcSsVM9GsQ36ahvMuNV_4clCcgV4dQ" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                             style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
+                        </div>
+                    </div>
+
+                    <!-- Image 6 -->
+                    <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
+                        <img src="https://lh3.googleusercontent.com/d/1WKvfcf5SA7UWndR3caccLVzHL-9O1I9Q" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                             style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
+                        </div>
+                    </div>
+
+                    <!-- Image 7 -->
+                    <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
+                        <img src="https://lh3.googleusercontent.com/d/1VK83C4ImtJp8tPpA1YpItlSSfbTXE_Y2" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                             style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
+                        </div>
+                    </div>
+
+                    <!-- Image 8 -->
+                    <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
+                        <img src="https://lh3.googleusercontent.com/d/1EMcEZVtKPzXeJ-ov_y68gtCnrOmy_Ze5" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                             style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
+                        </div>
+                    </div>
+
+                    <!-- Image 9 -->
+                    <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
+                        <img src="https://lh3.googleusercontent.com/d/1rPmHT9z0vl1rOTR69UPVHlwKg-7IVp5u" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                             style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
+                        </div>
+                    </div>
+
+                    <!-- Image 10 -->
+                    <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
+                        <img src="https://lh3.googleusercontent.com/d/1GWPnDL2CbXQ5Zmi8VF_DYHFU5beq5NQk" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                             style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
+                        </div>
+                    </div>
+
+                    <!-- Image 11 -->
+                    <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
+                        <img src="https://lh3.googleusercontent.com/d/1HbY80kL-XFOmls3HBRrXHPd7K8rCsbuw" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                             style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
+                        </div>
+                    </div>
+
+                    <!-- Image 12 -->
+                    <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
+                        <img src="https://lh3.googleusercontent.com/d/1OvH12yGva1VzmK2uGmDxVVa1LsfnOU_V" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                             style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
+                        </div>
+                    </div>
+
+                    <!-- Image 13 -->
+                    <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
+                        <img src="https://lh3.googleusercontent.com/d/1_jQEHDIK1Nimmpd8UhiFW_VcUEBNmXLk" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                             style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
+                        </div>
+                    </div>
+
+                    <!-- Image 14 -->
+                    <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
+                        <img src="https://lh3.googleusercontent.com/d/1BklC5iENHrWg2raZ-zh6Fwy6Fo1FrgXn" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                             style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Target Audience -->
+        <section class="py-16 px-8 bg-black border-t border-gray-900">
+            <h3 class="text-2xl font-bold text-center mb-10 text-gray-200">這堂課特別適合...</h3>
+            <div class="max-w-2xl mx-auto space-y-4">
+                <div class="flex items-center p-5 bg-[#111] border-l-4 border-neonGreen rounded-r-lg hover:bg-[#1a1a1a] transition-colors">
+                    <div class="text-neonGreen mr-5">✓</div>
+                    <p class="text-lg text-white">想做短影音卻不知從何開始的你</p>
+                </div>
+                <div class="flex items-center p-5 bg-[#111] border-l-4 border-purple-500 rounded-r-lg hover:bg-[#1a1a1a] transition-colors">
+                    <div class="text-purple-500 mr-5">✓</div>
+                    <p class="text-lg text-white">看到鏡頭就緊張、腦袋瞬間空白的你</p>
+                </div>
+                <div class="flex items-center p-5 bg-[#111] border-l-4 border-blue-400 rounded-r-lg hover:bg-[#1a1a1a] transition-colors">
+                    <div class="text-blue-400 mr-5">✓</div>
+                    <p class="text-lg text-white">想找快速複製、持續產出方法的你</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location & Price -->
+        <section class="py-16 px-6 bg-[#0f0f0f] border-t border-gray-800">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <!-- Location Info -->
+                <div class="bg-[#1a1a1a] p-8 rounded-2xl border border-gray-700">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center">
+                        <span class="w-2 h-8 bg-neonGreen mr-3 rounded-full"></span>
+                        場次資訊
+                    </h3>
+                    
+                    <div class="mb-8 pl-5 border-l border-gray-700">
+                        <h4 class="font-bold text-lg text-neonGreen">📍 桃園場</h4>
+                        <p class="text-white font-medium mt-1">3/26 (四) 12:00 - 14:00</p>
+                        <p class="text-gray-400 text-sm mt-1">地點：金字塔學苑<br>(中壢區延平路326號11樓之1)</p>
+                    </div>
+                    
+                    <div class="pl-5 border-l border-gray-700">
+                        <h4 class="font-bold text-lg text-neonGreen">📍 台北場</h4>
+                        <p class="text-white font-medium mt-1">3/27 (五) 12:00 - 14:00</p>
+                        <p class="text-gray-400 text-sm mt-1">地點：台北蒔蒔學院<br>(中山區中山北路二段99號6樓之1)</p>
+                    </div>
+                </div>
+
+                <!-- Price Info -->
+                <div class="bg-gradient-to-br from-purple-900 to-black p-8 rounded-2xl border border-purple-800/50 flex flex-col justify-center items-center text-center relative overflow-hidden group">
+                    <!-- Glow effect -->
+                    <div class="absolute inset-0 bg-purple-600 opacity-10 blur-xl group-hover:opacity-20 transition-opacity"></div>
+                    
+                    <h3 class="text-xl font-medium text-purple-200 mb-2 relative z-10">限時報名費用</h3>
+                    <div class="text-5xl font-black text-white my-5 relative z-10 tracking-tighter">
+                        $2,000<span class="text-xl text-gray-400 font-normal"> / 人</span>
+                    </div>
+                    <p class="text-gray-400 mb-8 text-sm relative z-10">推廣價名額有限，額滿為止</p>
+                    
+                    <button class="bg-neonGreen hover:bg-[#b3e600] text-black font-black py-4 px-10 rounded-full transition-all shadow-[0_0_20px_rgba(204,255,0,0.3)] hover:shadow-[0_0_30px_rgba(204,255,0,0.5)] transform hover:scale-105 relative z-10 w-full text-lg">
+                        立即搶佔名額
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black text-gray-500 py-8 text-center text-sm border-t border-gray-900">
+            <p class="font-bold text-gray-300 mb-2 text-base">RENATA 蕾娜塔髮品</p>
+            <p>協助製作超過 1000 支短影音，實戰經驗豐富</p>
+            <p class="mt-6 text-xs text-gray-700">© 2024 短影音實戰班 Promotion</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
