@@ -32,6 +32,10 @@
             position: relative;
             background-color: #000;
             box-shadow: 0 0 20px rgba(204, 255, 0, 0.15); /* Neon Green Glow */
+            /* Fix for video playback displacement/jitter */
+            transform: translateZ(0);
+            -webkit-transform: translateZ(0);
+            backface-visibility: hidden;
         }
         .phone-notch {
             position: absolute;
@@ -124,7 +128,7 @@
                         <iframe 
                             src="https://drive.google.com/file/d/18W2q77arlZmahJZe7OQL7hCDnM8aNJph/preview" 
                             class="w-full h-full z-10 relative bg-gray-900" 
-                            style="border:0;"
+                            style="border:0; transform: translateZ(0);"
                             allow="autoplay; encrypted-media" 
                             allowfullscreen>
                         </iframe>
@@ -143,7 +147,7 @@
                         <iframe 
                             src="https://drive.google.com/file/d/1EAKRBpazu-9ftQbCqplm7iCFUXaET4FF/preview" 
                             class="w-full h-full z-10 relative bg-gray-900" 
-                            style="border:0;"
+                            style="border:0; transform: translateZ(0);"
                             allow="autoplay; encrypted-media" 
                             allowfullscreen>
                         </iframe>
@@ -470,67 +474,6 @@
                              style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Target Audience -->
-        <section class="py-16 px-8 bg-black border-t border-gray-900">
-            <h3 class="text-2xl font-bold text-center mb-10 text-gray-200">這堂課特別適合...</h3>
-            <div class="max-w-2xl mx-auto space-y-4">
-                <div class="flex items-center p-5 bg-[#111] border-l-4 border-neonGreen rounded-r-lg hover:bg-[#1a1a1a] transition-colors">
-                    <div class="text-neonGreen mr-5">✓</div>
-                    <p class="text-lg text-white">想做短影音卻不知從何開始的你</p>
-                </div>
-                <div class="flex items-center p-5 bg-[#111] border-l-4 border-purple-500 rounded-r-lg hover:bg-[#1a1a1a] transition-colors">
-                    <div class="text-purple-500 mr-5">✓</div>
-                    <p class="text-lg text-white">看到鏡頭就緊張、腦袋瞬間空白的你</p>
-                </div>
-                <div class="flex items-center p-5 bg-[#111] border-l-4 border-blue-400 rounded-r-lg hover:bg-[#1a1a1a] transition-colors">
-                    <div class="text-blue-400 mr-5">✓</div>
-                    <p class="text-lg text-white">想找快速複製、持續產出方法的你</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Location & Price -->
-        <section class="py-16 px-6 bg-[#0f0f0f] border-t border-gray-800">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                
-                <!-- Location Info -->
-                <div class="bg-[#1a1a1a] p-8 rounded-2xl border border-gray-700">
-                    <h3 class="text-xl font-bold text-white mb-6 flex items-center">
-                        <span class="w-2 h-8 bg-neonGreen mr-3 rounded-full"></span>
-                        場次資訊
-                    </h3>
-                    
-                    <div class="mb-8 pl-5 border-l border-gray-700">
-                        <h4 class="font-bold text-lg text-neonGreen">📍 桃園場</h4>
-                        <p class="text-white font-medium mt-1">3/26 (四) 12:00 - 14:00</p>
-                        <p class="text-gray-400 text-sm mt-1">地點：金字塔學苑<br>(中壢區延平路326號11樓之1)</p>
-                    </div>
-                    
-                    <div class="pl-5 border-l border-gray-700">
-                        <h4 class="font-bold text-lg text-neonGreen">📍 台北場</h4>
-                        <p class="text-white font-medium mt-1">3/27 (五) 12:00 - 14:00</p>
-                        <p class="text-gray-400 text-sm mt-1">地點：台北蒔蒔學院<br>(中山區中山北路二段99號6樓之1)</p>
-                    </div>
-                </div>
-
-                <!-- Price Info -->
-                <div class="bg-gradient-to-br from-purple-900 to-black p-8 rounded-2xl border border-purple-800/50 flex flex-col justify-center items-center text-center relative overflow-hidden group">
-                    <!-- Glow effect -->
-                    <div class="absolute inset-0 bg-purple-600 opacity-10 blur-xl group-hover:opacity-20 transition-opacity"></div>
-                    
-                    <h3 class="text-xl font-medium text-purple-200 mb-2 relative z-10">限時報名費用</h3>
-                    <div class="text-5xl font-black text-white my-5 relative z-10 tracking-tighter">
-                        $2,000<span class="text-xl text-gray-400 font-normal"> / 人</span>
-                    </div>
-                    <p class="text-gray-400 mb-8 text-sm relative z-10">推廣價名額有限，額滿為止</p>
-                    
-                    <button class="bg-neonGreen hover:bg-[#b3e600] text-black font-black py-4 px-10 rounded-full transition-all shadow-[0_0_20px_rgba(204,255,0,0.3)] hover:shadow-[0_0_30px_rgba(204,255,0,0.5)] transform hover:scale-105 relative z-10 w-full text-lg">
-                        立即搶佔名額
-                    </button>
                 </div>
             </div>
         </section>
