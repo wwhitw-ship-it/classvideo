@@ -60,6 +60,21 @@
             opacity: 0.4;
             z-index: 0;
         }
+        
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ccff00; 
+        }
     </style>
 </head>
 <body class="bg-darkBg min-h-screen flex justify-center py-0 md:py-8 px-0 md:px-4 text-white">
@@ -328,8 +343,8 @@
                     <!-- Image 1 -->
                     <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
                         <img src="https://lh3.googleusercontent.com/d/183AQ2mX4rcsUzDblWX-_KMR4tfckLrO_" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
-                        <!-- Enhanced Blur: Changed backdrop-blur-[2px] to [6px] and increased bg opacity for stronger effect -->
-                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                        <!-- Removed hover clear effects: Always blurred -->
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 transition-all duration-500" 
                              style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
                         </div>
                     </div>
@@ -337,7 +352,7 @@
                     <!-- Image 2 -->
                     <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
                         <img src="https://lh3.googleusercontent.com/d/1Qu7Oo0m7-9rf4PxPsLfgYweYrg-eJrvF" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
-                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 transition-all duration-500" 
                              style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
                         </div>
                     </div>
@@ -345,7 +360,7 @@
                     <!-- Image 3 -->
                     <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
                         <img src="https://lh3.googleusercontent.com/d/1SLS1imXgD2RCgLktu0x7ER5pg1TMqxeh" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
-                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 transition-all duration-500" 
                              style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
                         </div>
                     </div>
@@ -353,7 +368,7 @@
                     <!-- Image 4 -->
                     <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
                         <img src="https://lh3.googleusercontent.com/d/1vBg7zRGqXoAeWDI9vssZXJwkpqaKhERF" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
-                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 transition-all duration-500" 
                              style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
                         </div>
                     </div>
@@ -361,7 +376,7 @@
                     <!-- Image 5 -->
                     <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
                         <img src="https://lh3.googleusercontent.com/d/1FlfcSsVM9GsQ36ahvMuNV_4clCcgV4dQ" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
-                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 transition-all duration-500" 
                              style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
                         </div>
                     </div>
@@ -369,7 +384,7 @@
                     <!-- Image 6 -->
                     <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
                         <img src="https://lh3.googleusercontent.com/d/1WKvfcf5SA7UWndR3caccLVzHL-9O1I9Q" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
-                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 transition-all duration-500" 
                              style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
                         </div>
                     </div>
@@ -377,7 +392,7 @@
                     <!-- Image 7 -->
                     <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
                         <img src="https://lh3.googleusercontent.com/d/1VK83C4ImtJp8tPpA1YpItlSSfbTXE_Y2" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
-                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 transition-all duration-500" 
                              style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
                         </div>
                     </div>
@@ -385,7 +400,7 @@
                     <!-- Image 8 -->
                     <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
                         <img src="https://lh3.googleusercontent.com/d/1EMcEZVtKPzXeJ-ov_y68gtCnrOmy_Ze5" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
-                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 transition-all duration-500" 
                              style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
                         </div>
                     </div>
@@ -393,7 +408,7 @@
                     <!-- Image 9 -->
                     <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
                         <img src="https://lh3.googleusercontent.com/d/1rPmHT9z0vl1rOTR69UPVHlwKg-7IVp5u" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
-                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 transition-all duration-500" 
                              style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
                         </div>
                     </div>
@@ -401,7 +416,7 @@
                     <!-- Image 10 -->
                     <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
                         <img src="https://lh3.googleusercontent.com/d/1GWPnDL2CbXQ5Zmi8VF_DYHFU5beq5NQk" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
-                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 transition-all duration-500" 
                              style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
                         </div>
                     </div>
@@ -409,7 +424,7 @@
                     <!-- Image 11 -->
                     <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
                         <img src="https://lh3.googleusercontent.com/d/1HbY80kL-XFOmls3HBRrXHPd7K8rCsbuw" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
-                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 transition-all duration-500" 
                              style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
                         </div>
                     </div>
@@ -417,7 +432,7 @@
                     <!-- Image 12 -->
                     <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
                         <img src="https://lh3.googleusercontent.com/d/1OvH12yGva1VzmK2uGmDxVVa1LsfnOU_V" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
-                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 transition-all duration-500" 
                              style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
                         </div>
                     </div>
@@ -425,7 +440,7 @@
                     <!-- Image 13 -->
                     <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
                         <img src="https://lh3.googleusercontent.com/d/1_jQEHDIK1Nimmpd8UhiFW_VcUEBNmXLk" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
-                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 transition-all duration-500" 
                              style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
                         </div>
                     </div>
@@ -433,7 +448,7 @@
                     <!-- Image 14 -->
                     <div class="relative group aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neonGreen transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
                         <img src="https://lh3.googleusercontent.com/d/1BklC5iENHrWg2raZ-zh6Fwy6Fo1FrgXn" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" alt="流量實證">
-                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-500" 
+                        <div class="absolute inset-0 backdrop-blur-[6px] bg-black/40 transition-all duration-500" 
                              style="-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
                         </div>
                     </div>
