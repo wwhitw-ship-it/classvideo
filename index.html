@@ -32,10 +32,17 @@
             position: relative;
             background-color: #000;
             box-shadow: 0 0 20px rgba(204, 255, 0, 0.15); /* Neon Green Glow */
-            /* Fix for video playback displacement/jitter */
-            transform: translateZ(0);
-            -webkit-transform: translateZ(0);
-            backface-visibility: hidden;
+            
+            /* Optimized Fix for video playback jitter */
+            aspect-ratio: 9 / 16;
+            contain: layout style paint;
+            flex-shrink: 0;
+        }
+        .phone-frame iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
         .phone-notch {
             position: absolute;
@@ -122,13 +129,13 @@
                 
                 <!-- Video 1 (Left) -->
                 <div class="flex flex-col items-center transform md:scale-90 lg:scale-100 transition-transform">
-                    <div class="phone-frame w-64 h-[437px] group transition-shadow duration-300 hover:shadow-[0_0_40px_rgba(204,255,0,0.4)]">
+                    <!-- Removed h-[437px], relying on aspect-ratio -->
+                    <div class="phone-frame w-64 group transition-shadow duration-300 hover:shadow-[0_0_40px_rgba(204,255,0,0.4)]">
                         <div class="phone-notch"></div>
                         <!-- Embedded Google Drive Video -->
                         <iframe 
                             src="https://drive.google.com/file/d/18W2q77arlZmahJZe7OQL7hCDnM8aNJph/preview" 
-                            class="w-full h-full z-10 relative bg-gray-900" 
-                            style="border:0; transform: translateZ(0);"
+                            class="z-10 relative bg-gray-900" 
                             allow="autoplay; encrypted-media" 
                             allowfullscreen>
                         </iframe>
@@ -141,13 +148,12 @@
 
                 <!-- Video 2 (Center - New) -->
                 <div class="flex flex-col items-center transform md:scale-90 lg:scale-100 transition-transform">
-                    <div class="phone-frame w-64 h-[437px] group transition-shadow duration-300 hover:shadow-[0_0_40px_rgba(204,255,0,0.4)]">
+                    <div class="phone-frame w-64 group transition-shadow duration-300 hover:shadow-[0_0_40px_rgba(204,255,0,0.4)]">
                         <div class="phone-notch"></div>
                         <!-- Embedded Google Drive Video -->
                         <iframe 
                             src="https://drive.google.com/file/d/1EAKRBpazu-9ftQbCqplm7iCFUXaET4FF/preview" 
-                            class="w-full h-full z-10 relative bg-gray-900" 
-                            style="border:0; transform: translateZ(0);"
+                            class="z-10 relative bg-gray-900" 
                             allow="autoplay; encrypted-media" 
                             allowfullscreen>
                         </iframe>
@@ -160,7 +166,7 @@
 
                 <!-- Video 3 (Right - Original Video 2) -->
                 <div class="flex flex-col items-center transform md:scale-90 lg:scale-100 transition-transform">
-                    <div class="phone-frame w-64 h-[437px] group cursor-pointer transition-shadow duration-300 hover:shadow-[0_0_40px_rgba(204,255,0,0.4)]">
+                    <div class="phone-frame w-64 group cursor-pointer transition-shadow duration-300 hover:shadow-[0_0_40px_rgba(204,255,0,0.4)]">
                         <div class="phone-notch"></div>
                         <div class="w-full h-full bg-gray-900 flex flex-col justify-center items-center text-gray-500 relative overflow-hidden">
                              <div class="absolute inset-0 opacity-5" style="background-image: linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px); background-size: 20px 20px;"></div>
